@@ -1,0 +1,423 @@
+﻿@*
+    AMD Power Solutions
+    Main Layout
+*@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>
+        @ViewData["Title"] - AMD Power Solutions
+    </title>
+
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+
+    <!-- ASP.NET Core CSS -->
+
+    <link rel="stylesheet"
+          href="~/AMD.PowerSolutions.styles.css"
+          asp-append-version="true" />
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+
+            <div class="container">
+
+
+                <!-- LOGO -->
+
+                <a class="navbar-brand amd-logo"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    <img src="~/images/logo.png"
+                         alt="AMD Power Solutions"
+                         class="amd-header-logo" />
+
+                </a>
+
+
+                <!-- MOBILE BUTTON -->
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!-- NAVIGATION -->
+
+                <div class="collapse navbar-collapse"
+                     id="mainNavbar">
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Index">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="Solar">
+
+                                Solar
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="InverterBattery">
+
+                                Inverter &amp; Battery
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="CCTV">
+
+                                CCTV
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="Installation">
+
+                                Installation
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                           <a class="nav-link"
+   asp-controller="Home"
+   asp-action="Index"
+   asp-fragment="about">
+
+    About Us
+
+</a>
+
+                        </li>
+
+
+                        <a class="nav-link nav-contact"
+   asp-controller="Home"
+   asp-action="Index"
+   asp-fragment="contact">
+
+    Contact
+
+</a>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main role="main">
+
+        @RenderBody()
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container py-4">
+
+            <div class="row g-4">
+
+
+                <!-- COMPANY -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <a class="footer-logo"
+                       asp-area=""
+                       asp-controller="Home"
+                       asp-action="Index">
+
+                        <span class="footer-logo-mark">
+                            AMD
+                        </span>
+
+                        <span class="footer-logo-text">
+
+                            <strong>
+                                POWER
+                            </strong>
+
+                            <small>
+                                SOLUTIONS
+                            </small>
+
+                        </span>
+
+                    </a>
+
+
+                    <p class="footer-description">
+
+                        Powering a Brighter &amp; Safer Tomorrow.
+                        Reliable solutions for solar, inverter,
+                        battery, CCTV and installation services.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h5 class="footer-heading">
+                        Quick Links
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <a class="nav-link"
+                           asp-controller="Home"
+                           asp-action="Index">
+
+                            Home
+
+                        </a>
+
+
+                        <a class="nav-link"
+                           asp-controller="Home"
+                           asp-action="Solar">
+
+                            Solar
+
+                        </a>
+
+
+                        <a class="nav-link"
+                           asp-controller="Home"
+                           asp-action="InverterBattery">
+
+                            Inverter &amp; Battery
+
+                        </a>
+
+
+                        <a class="nav-link"
+                           asp-controller="Home"
+                           asp-action="CCTV">
+
+                            CCTV
+
+                        </a>
+
+
+                        <a class="nav-link"
+                           asp-controller="Home"
+                           asp-action="Installation">
+
+                            Installation
+
+                        </a>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="col-lg-4 col-md-12">
+
+                    <h5 class="footer-heading">
+                        Contact Us
+                    </h5>
+
+                    <div class="footer-contact">
+
+                        <!-- PHONE -->
+
+                        <p>
+                            <strong>Phone:</strong>
+
+                            <a href="tel:+917899936664">
+                                +91 78999 36664
+                            </a>
+                        </p>
+
+
+                        <!-- WHATSAPP -->
+
+                        <p>
+                            <strong>WhatsApp:</strong>
+
+                            <a href="https://wa.me/917899936664"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                                Chat on WhatsApp
+
+                            </a>
+                        </p>
+
+
+                        <!-- EMAIL -->
+
+                        <p>
+                            <strong>Email:</strong>
+
+                            <a href="mailto:amdpowersolutionhyd@gmail.com">
+
+                                amdpowersolutionhyd@gmail.com
+
+                            </a>
+                        </p>
+
+
+                        <!-- LOCATION -->
+
+                        <p>
+                            <strong>Location:</strong>
+
+                            <a href="https://www.google.com/maps/search/?api=1&query=%2314-1-78%2F5%2F1%2C%20Allapur%20X%20Road%2C%20Borabanda%2C%20Hyderabad%2C%20Telangana%2018"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                                #14-1-78/5/1, Allapur X Road,
+                                Borabanda, HYD-18
+
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <div class="container text-center py-3">
+
+                <small>
+
+                    &copy; 2026 AMD Power Solutions.
+                    All Rights Reserved.
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
