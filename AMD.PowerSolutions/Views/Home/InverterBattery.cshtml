@@ -2,24 +2,303 @@
     ViewData["Title"] = "Inverter & Battery";
 }
 
+<style>
+
+    /* =========================================================
+           INVERTER & BATTERY PAGE
+           ========================================================= */
+
+    .power-page {
+        width: 100%;
+        background: #ffffff;
+        padding: 38px 28px 60px;
+    }
+
+    /* PAGE HEADING */
+    .power-heading {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+        .power-heading h1 {
+            font-size: 40px;
+            font-weight: 800;
+            color: #07142f;
+            margin: 0 0 8px;
+            line-height: 1.2;
+        }
+
+            .power-heading h1 span {
+                color: #008f4c;
+            }
+
+        .power-heading p {
+            font-size: 16px;
+            color: #536174;
+            margin: 0;
+        }
+
+
+    /* =========================================================
+           POWER CARD
+           ========================================================= */
+
+    .power-card {
+        max-width: 1290px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        background: #f8fafc;
+        border: 1px solid #dce2e8;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    }
+
+
+    /* IMAGE */
+
+    .power-image {
+        width: 50%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .power-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+
+    /* CONTENT */
+
+    .power-content {
+        width: 50%;
+        padding: 45px 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .power-content h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #103f7d;
+            margin: 0 0 18px;
+            line-height: 1.2;
+        }
+
+        .power-content p {
+            font-size: 18px;
+            line-height: 1.75;
+            color: #193b68;
+            margin: 0;
+        }
+
+
+    /* =========================================================
+           TABLET
+           ========================================================= */
+
+    @@media (max-width: 900px) {
+
+        .power-page {
+            padding: 30px 20px 50px;
+        }
+
+        .power-heading h1 {
+            font-size: 34px;
+        }
+
+        .power-content {
+            padding: 35px;
+        }
+
+            .power-content h2 {
+                font-size: 31px;
+            }
+
+            .power-content p {
+                font-size: 16px;
+            }
+    }
+
+
+    /* =========================================================
+           MOBILE
+           ========================================================= */
+
+    @@media (max-width: 700px) {
+
+        .power-page {
+            padding: 25px 14px 45px;
+        }
+
+        .power-heading {
+            margin-bottom: 22px;
+        }
+
+            .power-heading h1 {
+                font-size: 29px;
+                line-height: 1.2;
+            }
+
+            .power-heading p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        /* CARD */
+
+        .power-card {
+            display: block;
+            width: 100%;
+            margin-bottom: 18px;
+            border-radius: 12px;
+        }
+        /* FULL IMAGE - NO CROP */
+
+        .power-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+            .power-image img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: contain;
+            }
+        /* CONTENT */
+
+        .power-content {
+            width: 100%;
+            padding: 25px 22px 28px;
+        }
+
+            .power-content h2 {
+                font-size: 27px;
+                margin-bottom: 12px;
+            }
+
+            .power-content p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+    }
+
+
+    /* =========================================================
+           SMALL MOBILE
+           ========================================================= */
+
+    @@media (max-width: 400px) {
+
+        .power-heading h1 {
+            font-size: 26px;
+        }
+
+        .power-content {
+            padding: 22px 18px 25px;
+        }
+
+            .power-content h2 {
+                font-size: 24px;
+            }
+
+            .power-content p {
+                font-size: 14px;
+            }
+    }
+</style>
+
+
 <section class="power-page">
 
-    <!-- Page Heading -->
+
+    <!-- PAGE HEADING -->
+
     <div class="power-heading">
-        <h1>Our <span>Inverter &amp; Battery</span> Solutions</h1>
-        <p>Reliable power backup solutions for homes and businesses.</p>
+
+        <h1>
+            Our <span>Inverter &amp; Battery</span> Solutions
+        </h1>
+
+        <p>
+            Reliable power backup solutions for homes and businesses.
+        </p>
+
     </div>
 
-    <!-- Luminous Battery -->
-    <div class="power-full-banner">
-        <img src="~/images/luminous-battery.png"
-             alt="Luminous Battery" />
-    </div>
 
-    <!-- Luminous Inverter -->
-    <div class="power-full-banner">
-        <img src="~/images/luminous-inverter.png"
-             alt="Luminous Inverter" />
-    </div>
+    <!-- =====================================================
+         LUMINOUS BATTERY
+         ===================================================== -->
+
+    <section class="power-card">
+
+        <div class="power-image">
+
+            <img src="~/images/luminous-battery.png"
+                 alt="Luminous Battery" />
+
+        </div>
+
+
+        <div class="power-content">
+
+            <h2>
+                Luminous Battery
+            </h2>
+
+            <p>
+                Luminous batteries provide dependable and long-lasting
+                power backup for homes, offices and commercial spaces.
+                Designed for reliable performance, these batteries
+                deliver efficient backup power and excellent durability
+                during power cuts.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LUMINOUS INVERTER
+         ===================================================== -->
+
+    <section class="power-card">
+
+        <div class="power-image">
+
+            <img src="~/images/luminous-inverter.png"
+                 alt="Luminous Inverter" />
+
+        </div>
+
+
+        <div class="power-content">
+
+            <h2>
+                Luminous Inverter
+            </h2>
+
+            <p>
+                Luminous inverters offer efficient and reliable power
+                backup solutions for modern homes and businesses.
+                With dependable performance and intelligent power
+                management, they help keep essential appliances running
+                smoothly during power interruptions.
+            </p>
+
+        </div>
+
+    </section>
+
 
 </section>

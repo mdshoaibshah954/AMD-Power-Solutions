@@ -1,25 +1,267 @@
 ﻿@{
-    ViewData["Title"] = "CCTV Camera";
+    ViewData["Title"] = "CCTV Solutions";
 }
 
-<section class="cctv-page">
+<style>
 
-    <!-- Page Heading -->
-    <div class="cctv-heading">
-        <h1>Our <span>CCTV Camera</span> Solutions</h1>
-        <p>Reliable security solutions for homes, offices and businesses.</p>
-    </div>
+    .cctv-page {
+        padding: 35px 28px 60px;
+        background: #ffffff;
+    }
 
-    <!-- CP PLUS CCTV -->
-    <div class="cctv-full-banner">
-        <img src="~/images/cpplus-cctv.png"
-             alt="CP PLUS CCTV Kit" />
-    </div>
+    /* PAGE HEADING */
+    .cctv-heading {
+        text-align: center;
+        margin-bottom: 28px;
+    }
 
-    <!-- DeckLink CCTV -->
-    <div class="cctv-full-banner">
-        <img src="~/images/decklink-cctv.png"
-             alt="DeckLink CCTV Kit" />
-    </div>
+        .cctv-heading h1 {
+            font-size: 40px;
+            font-weight: 800;
+            color: #07142f;
+            margin-bottom: 8px;
+        }
 
-</section>
+            .cctv-heading h1 span {
+                color: #008f4c;
+            }
+
+        .cctv-heading p {
+            font-size: 16px;
+            color: #536174;
+            margin: 0;
+        }
+
+    /* CCTV CARD */
+    .cctv-card {
+        max-width: 1290px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: stretch;
+        background: #f8fafc;
+        border: 1px solid #dce2e8;
+        border-radius: 15px;
+        overflow: hidden;
+        min-height: 310px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    /* IMAGE */
+    .cctv-image {
+        width: 50%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .cctv-image img {
+            width: 100%;
+            height: auto;
+            min-height: 0;
+            display: block;
+            object-fit: contain;
+        }
+
+    /* CONTENT */
+    .cctv-content {
+        width: 50%;
+        padding: 45px 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .cctv-content h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #103f7d;
+            margin: 0 0 18px;
+        }
+
+        .cctv-content p {
+            font-size: 18px;
+            line-height: 1.75;
+            color: #193b68;
+            margin: 0;
+        }
+
+    /* TABLET */
+    @@media (max-width: 900px) {
+
+        .cctv-page {
+            padding: 30px 20px 50px;
+        }
+
+        .cctv-heading h1 {
+            font-size: 34px;
+        }
+
+        .cctv-card {
+            min-height: auto;
+        }
+
+        .cctv-content {
+            padding: 35px;
+        }
+
+            .cctv-content h2 {
+                font-size: 31px;
+            }
+
+            .cctv-content p {
+                font-size: 16px;
+            }
+    }
+
+    /* MOBILE */
+    @@media (max-width: 700px) {
+
+        .cctv-page {
+            padding: 25px 14px 45px;
+        }
+
+        .cctv-heading {
+            margin-bottom: 22px;
+        }
+
+            .cctv-heading h1 {
+                font-size: 29px;
+                line-height: 1.2;
+            }
+
+            .cctv-heading p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+        .cctv-card {
+            display: block;
+            width: 100%;
+            margin-bottom: 18px;
+            border-radius: 12px;
+        }
+
+        .cctv-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+            .cctv-image img {
+                width: 100%;
+                height: auto;
+                min-height: 0;
+                display: block;
+                object-fit: contain;
+            }
+
+        .cctv-content {
+            width: 100%;
+            padding: 25px 22px 28px;
+        }
+
+            .cctv-content h2 {
+                font-size: 27px;
+                margin-bottom: 12px;
+            }
+
+            .cctv-content p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+    }
+
+    /* SMALL MOBILE */
+    @@media (max-width: 400px) {
+
+        .cctv-heading h1 {
+            font-size: 26px;
+        }
+
+        .cctv-content {
+            padding: 22px 18px 25px;
+        }
+
+            .cctv-content h2 {
+                font-size: 24px;
+            }
+
+            .cctv-content p {
+                font-size: 14px;
+            }
+    }
+</style>
+
+
+<div class="cctv-page">
+
+    <!-- PAGE HEADING -->
+    <section class="cctv-heading">
+
+        <h1>
+            Our <span>CCTV</span> Solutions
+        </h1>
+
+        <p>
+            Reliable CCTV security solutions for homes, offices and businesses.
+        </p>
+
+    </section>
+
+
+    <!-- CCTV CARD 1 -->
+    <section class="cctv-card">
+
+        <div class="cctv-image">
+            <img src="~/images/cctv1.png"
+                 alt="CCTV Security Camera">
+        </div>
+
+        <div class="cctv-content">
+
+            <h2>
+                CCTV Cameras
+            </h2>
+
+            <p>
+                High-quality CCTV cameras designed to provide clear,
+                reliable and continuous security monitoring. Our CCTV
+                solutions help protect homes, offices, shops and
+                commercial spaces with advanced surveillance technology.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CCTV CARD 2 -->
+    <section class="cctv-card">
+
+        <div class="cctv-image">
+            <img src="~/images/cctv2.png"
+                 alt="CCTV Recording System">
+        </div>
+
+        <div class="cctv-content">
+
+            <h2>
+                DVR & NVR Systems
+            </h2>
+
+            <p>
+                Powerful DVR and NVR recording systems provide secure
+                storage and easy access to your surveillance footage.
+                Monitor multiple cameras, review recordings and keep
+                your property protected around the clock.
+            </p>
+
+        </div>
+
+    </section>
+
+
+   
+
+</div>

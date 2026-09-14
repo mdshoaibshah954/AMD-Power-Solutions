@@ -1463,15 +1463,37 @@ RESPONSIVE
 }
 
 .solar-brand-image {
-    min-height: 300px !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-    .solar-brand-image img {
-        min-height: 300px !important;
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
+.solar-brand-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .solar-brand-image {
+        min-height: auto !important;
+        height: auto !important;
     }
+
+    .solar-brand-image img {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        object-fit: contain !important;
+    }
+
+}
 
 .solar-brand-content {
     padding: 45px 55px !important;
@@ -1699,7 +1721,6 @@ RESPONSIVE
         border-radius: 10px;
     }
 }
-
 /* =========================================================
    CCTV CAMERA PAGE
    ========================================================= */
@@ -1753,7 +1774,52 @@ RESPONSIVE
         padding: 28px 0;
     }
 
-    .cctv-heading h1 {
+    .cctv-heading h1 {<!-- INSTALLATION -->
+
+            <div class="col-12 col-sm-6 col-lg">
+
+                <div class="service-card">
+
+                    <div class="service-image">
+
+                        <img src="~/images/installation.png"
+                             alt="Solar Installation Service" />
+
+                    </div>
+
+
+                    <div class="service-card-content">
+
+                       
+
+                        <h3>
+                            Installation Service
+                        </h3>
+
+                        <p>
+                            Professional and safe installation by
+                            experienced technicians.
+                        </p>
+
+                        <a href="/Home/Installation" class="service-btn">
+
+                            View More
+                            <span>→</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
         font-size: 28px;
     }
 
@@ -1983,3 +2049,35 @@ RESPONSIVE
         overflow: hidden !important;
     }
 }
+
+/* ================= SERVICE BUTTON ================= */
+
+.service-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #008f4c;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #008f4c;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+    .service-btn span {
+        color: #008f4c;
+        transition: color 0.3s ease;
+    }
+
+    .service-btn:hover {
+        background-color: #008f4c;
+        color: #ffffff;
+        border-color: #008f4c;
+    }
+
+        .service-btn:hover span {
+            color: #ffffff;
+        }

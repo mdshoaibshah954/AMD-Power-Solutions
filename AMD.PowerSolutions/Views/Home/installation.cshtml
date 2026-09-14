@@ -2,7 +2,219 @@
     ViewData["Title"] = "Installation";
 }
 
+<style>
+
+    /* =========================================================
+           INSTALLATION PAGE
+           ========================================================= */
+
+    .installation-page {
+        width: 100%;
+        background: #ffffff;
+        padding: 38px 28px 60px;
+    }
+
+
+    /* ================= PAGE HEADING ================= */
+
+    .installation-heading {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+        .installation-heading h1 {
+            font-size: 40px;
+            font-weight: 800;
+            color: #07142f;
+            margin: 0 0 8px;
+            line-height: 1.2;
+        }
+
+            .installation-heading h1 span {
+                color: #008f4c;
+            }
+
+        .installation-heading p {
+            font-size: 16px;
+            color: #536174;
+            margin: 0;
+        }
+
+
+    /* ================= INSTALLATION CARD ================= */
+
+    .installation-card {
+        max-width: 1290px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: stretch;
+        background: #f8fafc;
+        border: 1px solid #dce2e8;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    }
+
+
+    /* ================= IMAGE ================= */
+
+    .installation-card-image {
+        width: 50%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .installation-card-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+
+    /* ================= CONTENT ================= */
+
+    .installation-card-content {
+        width: 50%;
+        padding: 45px 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .installation-card-content h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #103f7d;
+            margin: 0 0 18px;
+            line-height: 1.2;
+        }
+
+        .installation-card-content p {
+            font-size: 18px;
+            line-height: 1.75;
+            color: #193b68;
+            margin: 0;
+        }
+
+
+    /* ================= TABLET ================= */
+
+    @@media (max-width: 900px) {
+
+        .installation-page {
+            padding: 30px 20px 50px;
+        }
+
+        .installation-heading h1 {
+            font-size: 34px;
+        }
+
+        .installation-card-content {
+            padding: 35px;
+        }
+
+            .installation-card-content h2 {
+                font-size: 31px;
+            }
+
+            .installation-card-content p {
+                font-size: 16px;
+            }
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @@media (max-width: 700px) {
+
+        .installation-page {
+            padding: 25px 14px 45px;
+        }
+
+        .installation-heading {
+            margin-bottom: 22px;
+        }
+
+            .installation-heading h1 {
+                font-size: 29px;
+                line-height: 1.2;
+            }
+
+            .installation-heading p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        /* CARD */
+
+        .installation-card {
+            display: block;
+            width: 100%;
+            margin-bottom: 18px;
+            border-radius: 12px;
+        }
+        /* IMAGE - FULL, NO CROP */
+
+        .installation-card-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+            .installation-card-image img {
+                width: 100%;
+                height: auto;
+                min-height: 0;
+                display: block;
+                object-fit: contain;
+            }
+        /* CONTENT */
+
+        .installation-card-content {
+            width: 100%;
+            padding: 25px 22px 28px;
+        }
+
+            .installation-card-content h2 {
+                font-size: 27px;
+                margin-bottom: 12px;
+            }
+
+            .installation-card-content p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+    }
+
+
+    /* ================= SMALL MOBILE ================= */
+
+    @@media (max-width: 400px) {
+
+        .installation-heading h1 {
+            font-size: 26px;
+        }
+
+        .installation-card-content {
+            padding: 22px 18px 25px;
+        }
+
+            .installation-card-content h2 {
+                font-size: 24px;
+            }
+
+            .installation-card-content p {
+                font-size: 14px;
+            }
+    }
+
+</style>
+
+
 <div class="installation-page">
+
 
     <!-- ================= PAGE HEADING ================= -->
 
@@ -25,8 +237,26 @@
     <section class="installation-card">
 
         <div class="installation-card-image">
+
             <img src="~/images/installation-step1.png"
                  alt="Site Survey and Planning">
+
+        </div>
+
+        <div class="installation-card-content">
+
+            <h2>
+                Site Survey &amp; Planning
+            </h2>
+
+            <p>
+                Our installation process begins with a detailed site
+                survey and professional planning. Our team evaluates
+                your property, understands your power requirements
+                and identifies the best location for installing the
+                Solar, Inverter, Battery or CCTV system.
+            </p>
+
         </div>
 
     </section>
@@ -37,8 +267,26 @@
     <section class="installation-card">
 
         <div class="installation-card-image">
+
             <img src="~/images/installation-step2.png"
                  alt="Professional Installation">
+
+        </div>
+
+        <div class="installation-card-content">
+
+            <h2>
+                Professional Installation
+            </h2>
+
+            <p>
+                Our trained professionals carefully install the system
+                using quality equipment and proper installation
+                practices. Every component is securely positioned and
+                connected to ensure safe, efficient and reliable
+                performance.
+            </p>
+
         </div>
 
     </section>
@@ -49,10 +297,29 @@
     <section class="installation-card">
 
         <div class="installation-card-image">
+
             <img src="~/images/installation-step3.png"
                  alt="Testing Handover and Customer Support">
+
+        </div>
+
+        <div class="installation-card-content">
+
+            <h2>
+                Testing, Handover &amp; Support
+            </h2>
+
+            <p>
+                After installation, we thoroughly test the complete
+                system to ensure everything is working correctly.
+                Once the system passes all checks, we explain its
+                operation to the customer and provide reliable
+                after-installation support whenever required.
+            </p>
+
         </div>
 
     </section>
+
 
 </div>
